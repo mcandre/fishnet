@@ -1,0 +1,21 @@
+#!/bin/bash
+unset IFS
+set -eu
+
+usage() {
+    printf "Usage: %s <path>\n" "$0"
+}
+
+if [ "$#" -ne 1 ]; then
+    usage
+    exit 1
+fi
+
+PTH="$1"
+shift
+
+U="$(whoami)"
+
+sudo chown -R "${U}:jellyfin" "$PTH"
+find "$PTH" -type d -exec chmod 0775 "{}" \;
+find "$PTH" -type f -exec chmod 0664 "{}" \;
