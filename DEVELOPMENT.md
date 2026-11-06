@@ -10,6 +10,7 @@ We follow standard, `make` based commands for performing build operations.
 * [Go](https://go.dev/)
 * [Jellyfin](https://jellyfin.org/)
 * [make](https://pubs.opengroup.org/onlinepubs/9799919799/utilities/make.html)
+* GNU compatible [readlink](https://www.gnu.org/software/coreutils/manual/html_node/readlink-invocation.html)
 * [ShellCheck](https://www.shellcheck.net/) 0.11.0+
 * Provision additional dev tools with `make -f install.mk`
 

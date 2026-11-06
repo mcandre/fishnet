@@ -24,6 +24,7 @@ git clone https://github.com/mcandre/fishnet.git ~/src/github.com/mcandre/fishne
 * [findutils](https://pubs.opengroup.org/onlinepubs/9799919799/utilities/find.html)
 * [git](https://git-scm.com/)
 * [Jellyfin](https://jellyfin.org/)
+* GNU compatible [readlink](https://www.gnu.org/software/coreutils/manual/html_node/readlink-invocation.html)
 
 ## Postinstall
 

@@ -7,6 +7,17 @@ if [ -z "$FISHNET_JELLYFIN_HOME" ]; then
     exit 1
 fi
 
-sudo chown -R "$(whoami):jellyfin" "$FISHNET_JELLYFIN_HOME"
-find "$FISHNET_JELLYFIN_HOME" -type d -exec chmod 0775 "{}" \;
-find "$FISHNET_JELLYFIN_HOME" -type f -exec chmod 0664 "{}" \;
+PTH="$(readlink -f "$FISHNET_JELLYFIN_HOME")"
+
+case "$PTH" in
+    '/' | "$HOME")
+        echo "error: hazardous FISHNET_JELLYFIN_HOME: $FISHNET_JELLYFIN_HOME"
+        exit 1
+        ;;
+    *)
+        ;;
+esac
+
+sudo chown -R "$(whoami):jellyfin" "$PTH"
+find "$PTH" -type d -exec chmod 0775 "{}" \;
+find "$PTH" -type f -exec chmod 0664 "{}" \;
