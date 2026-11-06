@@ -48,7 +48,7 @@ fishnet streamlines multimedia files and folders for better integration with Jel
 
 ## Tips
 
-* Re-run refresh metadata on videos, collections, or libraries as needed.
+* Re-run refresh metadata in `Scan for new and updated files` and/or `Search for missing metadata` modes as needed.
 * Ensure the `jellyfin` user is a member of a `jellyfin` group.
 * Review Jellyfin logs to gather further troubleshooting details.
 
