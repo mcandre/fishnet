@@ -11,12 +11,7 @@ This helps to work around low level Jellyfin glitches, such as NFO metadata file
 # EXAMPLES
 
 ```console
-$ fishnet some-video.mkv
-$ fishnet some-poster.png
-# fishnet some-movie.nfo
-$ fishnet some-folder/
-$ fishnet some-jellyfin-library/
-$ fishnet some-jellyfin-root-directory/
+$ fishnet
 ```
 
 # DOWNLOAD
@@ -33,6 +28,8 @@ git clone https://github.com/mcandre/fishnet.git ~/src/github.com/mcandre/fishne
 ## Postinstall
 
 Register `"$HOME/src/github.com/mcandre/fishnet/bin` to `PATH` environment variable.
+
+Set environment variable `FISHNET_JELLYFIN_HOME` to a parent directory containing your libraries (e.g. `$HOME/jellyfin`).
 
 For details on building from source, see [DEVELOPMENT](DEVELOPMENT.md).
 

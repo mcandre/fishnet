@@ -2,20 +2,11 @@
 unset IFS
 set -eu
 
-usage() {
-    printf "Usage: %s <path>\n" "$0"
-}
-
-if [ "$#" -ne 1 ]; then
-    usage
+if [ -z "$FISHNET_JELLYFIN_HOME" ]; then
+    echo 'error: blank/missing FISHNET_JELLYFIN_HOME'
     exit 1
 fi
 
-PTH="$1"
-shift
-
-U="$(whoami)"
-
-sudo chown -R "${U}:jellyfin" "$PTH"
-find "$PTH" -type d -exec chmod 0775 "{}" \;
-find "$PTH" -type f -exec chmod 0664 "{}" \;
+sudo chown -R "$(whoami):jellyfin" "$FISHNET_JELLYFIN_HOME"
+find "$FISHNET_JELLYFIN_HOME" -type d -exec chmod 0775 "{}" \;
+find "$FISHNET_JELLYFIN_HOME" -type f -exec chmod 0664 "{}" \;

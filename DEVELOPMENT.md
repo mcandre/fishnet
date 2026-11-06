@@ -23,6 +23,8 @@ Register output of `go env GOBIN` to `PATH` environment variable.
 
 Register `<git-clone-directory>/bin` to `PATH` environment variable.
 
+Set environment variable `FISHNET_JELLYFIN_HOME` to a parent directory containing your libraries (e.g. `$HOME/jellyfin`).
+
 # TASKS
 
 We automate engineering tasks.
