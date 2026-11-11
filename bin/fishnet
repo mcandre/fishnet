@@ -7,7 +7,18 @@ if [ -z "$FISHNET_JELLYFIN_HOME" ]; then
     exit 1
 fi
 
-PTH="$(readlink -f "$FISHNET_JELLYFIN_HOME")"
+PTH="$FISHNET_JELLYFIN_HOME"
+
+case "$PTH" in
+    '.' | '..')
+        echo "error: hazardous FISHNET_JELLYFIN_HOME: $FISHNET_JELLYFIN_HOME"
+        exit 1
+        ;;
+    *)
+        ;;
+esac
+
+PTH="$(readlink -f "$PTH")"
 
 case "$PTH" in
     '/' | "$HOME")
