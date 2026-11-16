@@ -1,6 +1,6 @@
 # fishnet: Jellyfin normalizer
 
-[![CI/CD](https://badgen.net/github/checks/mcandre/fishnet?icon=github)](https://github.com/mcandre/fishnet/actions) [![License](https://badgen.net/static/license/BSD/ab2b29)](LICENSE.md)
+[![CI/CD](https://badgen.net/github/checks/mcandre/fishnet?icon=github)](https://github.com/mcandre/fishnet/actions) [![License](https://badgen.net/static/license/BSD/ab2b29?icon=freebsd)](LICENSE.md)
 
 # SUMMARY
 
